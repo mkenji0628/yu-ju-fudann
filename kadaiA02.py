@@ -45,7 +45,6 @@ def three_choice2():
 
     result = choice(three_choice1)
     return redirect(url_for('three_choice1', result=result))
-    return render_template("three_choice1.html", result=result)
 
 
 @app.route("/members/")
