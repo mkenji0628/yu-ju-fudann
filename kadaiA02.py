@@ -32,18 +32,22 @@ def hello(name):
     return render_template("hello.html", name=name)
 
 
-@app.route("/three_choice1/", methods=['GET'])
-def three_choice1():
-    return render_template("three_choice1.html")
+@app.route("/three_choice1/<result>", methods=['GET'])
+def three_choice1(result="wads"):
+    print(result)
+
+    return render_template("three_choice1.html", result=result)
 
 
 @app.route("/three_choice1/", methods=['POST'])
 def three_choice2():
     three_choice1 = [request.form['name1'], request.form['name2'], request.form['name3']]
 
+
     print(three_choice1)
 
     result = choice(three_choice1)
+    print(result)
     return redirect(url_for('three_choice1', result=result))
 
 
