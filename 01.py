@@ -21,7 +21,7 @@ def hello(name):
 def omikuji():
     omikuji = ["大吉", "吉", "小吉"]
     result = choice(omikuji)
-    return render_template("omikuji.html", result=result)
+    return render_template("three_choice.html", result=result)
 
 
 @app.route("/members/")
