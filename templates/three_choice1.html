@@ -1,12 +1,23 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>選択の結果</title>
+    <title>選択肢入力ページ</title>
 </head>
 <body>
-<h1>
-    四の五の...{{ result }}です。<br>
-</h1>
+<form action="" method="post">
+    <div>
+        <label for="name">1つ目の入力</label><br>
+        <input type="text" name="name" id="name">
+    </div>
+    <div>
+        <label for="password">2つ目の入力</label><br>
+        <input type="password" name="password" id="password">
+    </div>
+    <div>
+        <label for="password">3つ目の入力</label><br>
+        <input type="password" name="password" id="password">
+    </div>
+    <input type="submit" value="抽選開始">
+</form>
 </body>
 </html>

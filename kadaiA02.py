@@ -36,22 +36,20 @@ def three_choice1():
     three_choice1 = [str1, str2, str3]
     result = choice(three_choice1)
     return render_template("three_choice1.html", result=result)
-
-
-# @app.route("/three_choice1", methods=["GET", "POST"])
-# def three_choice():
-#     print(request.form[str1, str2, str3])
 #
+#
+# @app.route("/three_choice1", methods=["GET", "POST"])
+# def three_choice1():
+#     print(request.form[str1, str2, str3])
 #     if request.method == "GET":
 #         return '''
 #         <form action="/three_choice1" method="post">
-#             1個目:<input type="text" name="one"><br>
-#             2個目:<input type="text" name="two"><br>
-#             3個目:<input type="text" name="three"><br>
+#             1個目:<input type="text"><br>
+#             2個目:<input type="text"><br>
+#             3個目:<input type="text"><br>
 #             <input type='submit'>
 #         </from>
 #         '''
-
 
 @app.route("/members/")
 def members():
