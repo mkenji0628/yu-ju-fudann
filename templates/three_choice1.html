@@ -2,23 +2,51 @@
 <head>
     <meta charset="UTF-8">
     <title>aa選択肢入力ページ</title>
+
+    <style type="text/css">
+        body{
+        background-color:#ff0000;
+        }
+
+        .first{
+        font-size:50px;
+        }
+
+
+
+        .kekka{
+        background-color:#ccc;
+        border:1px solid #ccc;
+        text-align:center;
+        width:400px;
+        font-size:40px;
+        color:#fff;
+        }
+
+    </style>
+
 </head>
 <body>
-<form action="/three_choice1/" method="post">
-    <div>
-        <label for="name1">1つ目の入力</label><br>
-        <input type="text" name="name1" id="name1">
-    </div>
-    <div>
-        <label for="name2">2つ目の入力</label><br>
-        <input type="text" name="name2" id="name2">
-    </div>
-    <div>
-        <label for="name3">3つ目の入力</label><br>
-        <input type="text" name="name3" id="name3">
-    </div>
-    <input type="submit" value="抽選開始">
-</form>
-<p>{{ result }}</p>
+<div class="first">
+    <form action="/three_choice1/" method="post">
+        <div>
+            <label for="name1">1つ目の入力</label><br>
+            <input type="text" name="name1" id="name1" size="200">
+        </div>
+        <div>
+            <label for="name2">2つ目の入力</label><br>
+            <input type="text" name="name2" id="name2">
+        </div>
+        <div>
+            <label for="name3">3つ目の入力</label><br>
+            <input type="text" name="name3" id="name3">
+        </div>
+        <input type="submit" value="抽選開始">
+    </form>
+
+</div>
+<div class="kekka">
+    <p>{{ result }}</p>
+</div>
 </body>
 </html>
