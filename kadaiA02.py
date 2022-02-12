@@ -1,12 +1,13 @@
 from random import choice
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-str1 = input('1個目:')
-str2 = input('2個目:')
-str3 = input('3個目:')
+
+# str1 = input('1個目:')
+# str2 = input('2個目:')
+# str3 = input('3個目:')
 
 
 @app.route("/")
@@ -31,11 +32,22 @@ def hello(name):
     return render_template("hello.html", name=name)
 
 
-@app.route("/three_choice1/")
+@app.route("/three_choice1/", methods=['GET'])
 def three_choice1():
-    three_choice1 = [str1, str2, str3]
+    return render_template("three_choice1.html")
+
+
+@app.route("/three_choice1/", methods=['POST'])
+def three_choice2():
+    three_choice1 = [request.form['name1'], request.form['name2'], request.form['name3']]
+
+    print(three_choice1)
+
     result = choice(three_choice1)
+    return redirect(url_for('three_choice1', result=result))
     return render_template("three_choice1.html", result=result)
+
+
 #
 #
 # @app.route("/three_choice1", methods=["GET", "POST"])
