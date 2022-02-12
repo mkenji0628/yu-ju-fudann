@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじ</title>
+</head>
+<body>
+<h1>
+    今日の運勢は...{{ result }}<br>
+    <p>{{ message }}</p>
+    {% if result == "大吉" %}
+    <p>やったね!</p>
+    {% endif %}
+
+    {% if result == "吉" %}
+    <p>吉だね!</p>
+    {% endif %}
+
+
+</h1>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>メンバーリスト</title>
+</head>
+<body>
+<!--    {{ members }}-->
+    <h1>メンバー一覧</h1>
+    <ul>
+        {% for member in members %}
+            <li>{{ member }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
