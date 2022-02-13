@@ -2,6 +2,10 @@ from random import choice
 
 from flask import Flask, request, render_template, redirect, url_for
 
+import taberogu
+
+print(taberogu.tabe)
+
 app = Flask(__name__)
 
 
@@ -54,6 +58,20 @@ def three_choice2():
 def members():
     members = ["Bob", "Tom", "Ken"]
     return render_template("members.html", members=members)
+
+
+@app.route("/tabemono/")
+def tabemono():
+    tabemono = taberogu.tabe
+    result = choice(tabemono)
+    return render_template("tabemono.html", result=result)
+
+
+@app.route("/omikuji/")
+def omikuji():
+    omikuji = ["大吉", "吉", "小吉"]
+    result = choice(omikuji)
+    return render_template("omikuji.html", result=result)
 
 
 if __name__ == '__main__':

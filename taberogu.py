@@ -13,7 +13,7 @@ restrants = soup.find_all("div", class_="list-rst__wrap js-open-new-window")
 
 tabe = []
 for r in restrants:
-    print(r.find("a").text, r.a.get("href"))
+    # print(r.find("a").text, r.a.get("href"))
     tabe.append(r.find("a").text)
 
-print(tabe)
+# print(tabe)
