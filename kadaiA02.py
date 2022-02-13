@@ -2,6 +2,7 @@ from random import choice
 
 from flask import Flask, request, render_template, redirect, url_for
 
+import itinotabe
 import taberogu
 
 print(taberogu.tabe)
@@ -65,6 +66,13 @@ def tabemono():
     tabemono = taberogu.tabe
     result = choice(tabemono)
     return render_template("tabemono.html", result=result)
+
+
+@app.route("/itinoseki/")
+def itinoseki():
+    itinoseki = itinotabe.tabe2
+    result = choice(itinoseki)
+    return render_template("itinoseki.html", result=result)
 
 
 @app.route("/omikuji/")
