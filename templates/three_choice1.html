@@ -1,18 +1,17 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>aa選択肢入力ページ</title>
+    <title>選択肢入力ページ</title>
 
     <style type="text/css">
         body{
-        background-color:#ff0000;
+        background-color:#99FF99;
         }
 
         .first{
-        font-size:50px;
+        font-size:50px; # 1～3つ目の入力
+        height:100px;
         }
-
-
 
         .kekka{
         background-color:#ccc;
@@ -23,28 +22,33 @@
         color:#fff;
         }
 
+
     </style>
 
 </head>
 <body>
+
 <div class="first">
     <form action="/three_choice1/" method="post">
         <div>
             <label for="name1">1つ目の入力</label><br>
-            <input type="text" name="name1" id="name1" size="200">
+            <input type="text" name="name1" id="name1" size="30" maxlength="10"
+                   value="" placeholder="１０文字以内で入力してください。">
         </div>
         <div>
             <label for="name2">2つ目の入力</label><br>
-            <input type="text" name="name2" id="name2">
+            <input type="text" name="name2" id="name2" size="30" maxlength="10"
+                   value="" placeholder="１０文字以内で入力してください。" size="100">
         </div>
         <div>
             <label for="name3">3つ目の入力</label><br>
-            <input type="text" name="name3" id="name3">
+            <input type="text" name="name3" id="name3" size="30" maxlength="10"
+                   value="" placeholder="１０文字以内で入力してください。" size="100">
         </div>
         <input type="submit" value="抽選開始">
     </form>
-
 </div>
+
 <div class="kekka">
     <p>{{ result }}</p>
 </div>
